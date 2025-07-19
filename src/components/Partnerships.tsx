@@ -3,34 +3,73 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Partnerships = () => {
-  const partners = [
-    {
-      name: "Technilab",
-      url: "https://www.technilab.fr",
-      specialty: "Laboratory & Process Equipment",
-      description: "Leading French manufacturer of laboratory and process equipment for environmental analysis and quality control.",
-      keyProducts: ["Analytical instruments", "Laboratory equipment", "Quality control systems"]
-    },
+  const processIndustryPartners = [
     {
       name: "Sodimate",
       url: "https://www.sodimate.com", 
       specialty: "Powder Handling Solutions",
-      description: "Global leader in powder and granular material handling systems with innovative storage and dosing technologies.",
-      keyProducts: ["Powder storage silos", "Dosing systems", "Pneumatic conveyors"]
+      description: "Global leader in powder and granular material handling systems for pharmaceutical, food, and chemical industries.",
+      keyProducts: ["Powder storage silos", "Dosing systems", "Pneumatic conveyors"],
+      sectors: ["Pharmaceutical", "Food & Beverage", "Chemical"]
+    },
+    {
+      name: "Valve Engineering",
+      url: "https://www.valvengineering.com",
+      specialty: "Process Valves & Control",
+      description: "Specialized in high-performance valves and control systems for process industries.",
+      keyProducts: ["Process valves", "Control systems", "Automation solutions"],
+      sectors: ["Pharmaceutical", "Chemical", "Food Processing"]
+    },
+    {
+      name: "Parimix",
+      url: "https://parimix.com",
+      specialty: "Mixing & Processing Equipment",
+      description: "Advanced mixing and processing solutions for various industrial applications.",
+      keyProducts: ["Industrial mixers", "Processing equipment", "Custom solutions"],
+      sectors: ["Chemical", "Food & Beverage", "Pharmaceutical"]
+    },
+    {
+      name: "Transitube",
+      url: "https://transitube.com",
+      specialty: "Pneumatic Conveying",
+      description: "Innovative pneumatic conveying systems for bulk material handling.",
+      keyProducts: ["Pneumatic conveyors", "Material handling", "Bulk systems"],
+      sectors: ["Food Processing", "Pharmaceutical", "Chemical"]
+    }
+  ];
+
+  const environmentalPartners = [
+    {
+      name: "Technilab",
+      url: "https://www.technilab.fr",
+      specialty: "Environmental Analysis Equipment",
+      description: "Leading manufacturer of laboratory and environmental analysis equipment for water and air quality monitoring.",
+      keyProducts: ["Water analysis", "Air monitoring", "Quality control systems"],
+      sectors: ["Water Treatment", "Environmental Monitoring", "Desalination"]
     },
     {
       name: "Faure Equipments",
       url: "https://www.faureequip.com",
-      specialty: "Water Treatment Systems",
-      description: "Specialized in water and wastewater treatment equipment with focus on membrane technologies and filtration.",
-      keyProducts: ["Membrane systems", "Filtration equipment", "Water treatment plants"]
+      specialty: "Water & Wastewater Treatment",
+      description: "Specialized in water treatment, desalination, and wastewater management systems.",
+      keyProducts: ["Membrane systems", "Filtration equipment", "Desalination plants"],
+      sectors: ["Potable Water", "Desalination", "Wastewater"]
     },
     {
       name: "FB Procédés",
       url: "https://www.fb-procedes.com",
-      specialty: "Process Engineering",
-      description: "Expert in industrial process engineering and automation solutions for chemical and environmental industries.",
-      keyProducts: ["Process automation", "Control systems", "Engineering services"]
+      specialty: "Environmental Process Engineering",
+      description: "Expert in environmental process engineering for gas treatment, sludge processing, and Oil & Gas applications.",
+      keyProducts: ["Gas treatment", "Sludge processing", "Environmental automation"],
+      sectors: ["Gas Treatment", "Sludge Processing", "Oil & Gas"]
+    },
+    {
+      name: "APIA",
+      url: "https://www.apia-sa.com/en/",
+      specialty: "Air Pollution Control",
+      description: "Advanced solutions for air pollution control and gas treatment in industrial environments.",
+      keyProducts: ["Air filtration", "Gas scrubbers", "Emission control"],
+      sectors: ["Air Treatment", "Gas Processing", "Oil & Gas"]
     }
   ];
 
@@ -72,7 +111,7 @@ const Partnerships = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-mono font-bold text-accent mb-2">4</div>
+                  <div className="text-4xl font-mono font-bold text-accent mb-2">8</div>
                   <div className="text-white/90">Exclusive Partnerships</div>
                 </div>
               </div>
@@ -80,47 +119,134 @@ const Partnerships = () => {
           </Card>
         </div>
 
-        {/* Partners grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {partners.map((partner, index) => (
-            <Card key={index} className="hover-lift">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-xl font-bold">{partner.name}</CardTitle>
-                  <Button variant="outline" size="sm" asChild>
-                    <a 
-                      href={partner.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      Visit Site
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <p className="text-primary font-medium">{partner.specialty}</p>
-              </CardHeader>
-              
-              <CardContent>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {partner.description}
-                </p>
-
-                <div>
-                  <h4 className="font-semibold mb-3">Key Products & Services:</h4>
-                  <div className="space-y-2">
-                    {partner.keyProducts.map((product, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                        <span className="text-sm">{product}</span>
-                      </div>
-                    ))}
+        {/* Process Industry Partners */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Process Industry Partners
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Serving pharmaceutical, food & beverage, and chemical industries with advanced process solutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {processIndustryPartners.map((partner, index) => (
+              <Card key={index} className="hover-lift">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg font-bold">{partner.name}</CardTitle>
+                    <Button variant="outline" size="sm" asChild>
+                      <a 
+                        href={partner.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        Visit Site
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <p className="text-primary font-medium">{partner.specialty}</p>
+                </CardHeader>
+                
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    {partner.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold mb-2 text-sm">Industry Sectors:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {partner.sectors.map((sector, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-primary/10 text-primary rounded text-xs">
+                          {sector}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2 text-sm">Key Products:</h4>
+                    <div className="space-y-1">
+                      {partner.keyProducts.map((product, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                          <span className="text-xs">{product}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Environmental Treatment Partners */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Environmental Treatment Partners
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive solutions for water treatment, desalination, wastewater, gas treatment, and Oil & Gas industries
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {environmentalPartners.map((partner, index) => (
+              <Card key={index} className="hover-lift">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg font-bold">{partner.name}</CardTitle>
+                    <Button variant="outline" size="sm" asChild>
+                      <a 
+                        href={partner.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        Visit Site
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                  <p className="text-primary font-medium">{partner.specialty}</p>
+                </CardHeader>
+                
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    {partner.description}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold mb-2 text-sm">Industry Sectors:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {partner.sectors.map((sector, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-accent/10 text-accent rounded text-xs">
+                          {sector}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2 text-sm">Key Products:</h4>
+                    <div className="space-y-1">
+                      {partner.keyProducts.map((product, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                          <span className="text-xs">{product}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Regional coverage */}

@@ -18,10 +18,10 @@ All colors MUST be HSL. Professional, technical, eco-conscious palette.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Primary - Industrial Blue for technical elements */
-    --primary: 214 84% 28%;
+    /* Primary - SODITECH Blue matching logo */
+    --primary: 214 100% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-variant: 214 70% 35%;
+    --primary-variant: 214 90% 35%;
 
     /* Secondary - Professional Grey */
     --secondary: 220 8% 95%;
@@ -36,10 +36,10 @@ All colors MUST be HSL. Professional, technical, eco-conscious palette.
     --accent-foreground: 0 0% 100%;
     --accent-light: 142 45% 85%;
 
-    /* Industrial palette extensions */
-    --industrial-dark: 220 20% 12%;
-    --industrial-medium: 220 15% 25%;
-    --industrial-light: 220 10% 85%;
+    /* Industrial palette extensions - matching SODITECH logo */
+    --industrial-dark: 220 15% 15%;
+    --industrial-medium: 220 12% 35%;
+    --industrial-light: 220 8% 88%;
     
     /* Environmental palette */
     --eco-primary: 142 65% 35%;

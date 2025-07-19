@@ -1,9 +1,18 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun, Globe } from "lucide-react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [language, setLanguage] = useState("en");
 
   const navigation = [
     { name: "Home", href: "#home" },
@@ -20,12 +29,19 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-mono font-bold text-xl text-primary">
-              SODITECH
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
+                <span className="text-white font-bold text-sm">ST</span>
+              </div>
+              <div>
+                <div className="font-mono font-bold text-xl text-primary">
+                  SODITECH
+                </div>
+                <span className="text-xs text-muted-foreground hidden sm:block">
+                  Advanced Process Solutions
+                </span>
+              </div>
             </div>
-            <span className="ml-2 text-sm text-muted-foreground hidden sm:block">
-              Industrial Solutions
-            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -41,8 +57,41 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Controls */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Language Selector */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Globe className="h-4 w-4" />
+                  <span className="ml-1 text-xs">
+                    {language === "en" ? "EN" : language === "fr" ? "FR" : "AR"}
+                  </span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => setLanguage("en")}>
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage("fr")}>
+                  Français
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage("ar")}>
+                  العربية
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Theme Toggle */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            >
+              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
+
             <Button variant="outline" size="sm">
               Get Quote
             </Button>
