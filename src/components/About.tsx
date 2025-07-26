@@ -19,7 +19,7 @@ const About = () => {
       description: "Secured exclusive partnerships with European manufacturers"
     },
     {
-      year: "2020+",
+      year: "2024",
       title: "Environmental Focus",
       description: "Leading the transition to eco-conscious industrial solutions"
     }
