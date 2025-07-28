@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import MenaMap from "@/components/MenaMap";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,20 +47,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "info@soditech-ltd.com",
+      value: "contact@soditech-ltd.com",
       description: "Send us your project requirements"
     },
     {
       icon: Phone,
       title: "Phone & WhatsApp",
-      value: "+971 XX XXX XXXX",
+      value: "+971 50 763 6248",
       description: "Direct line for urgent inquiries"
     },
     {
       icon: MapPin,
-      title: "Regional Coverage",
-      value: "MENA Region",
-      description: "Serving across Middle East & North Africa"
+      title: "Our Office",
+      value: "Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai – United Arab Emirates",
+      description: "MENA Regional Headquarters"
     }
   ];
 
@@ -115,19 +116,14 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Regional map placeholder */}
+            {/* MENA Regional Map */}
             <Card className="mt-6">
               <CardHeader>
-                <CardTitle className="text-lg">Our Service Area</CardTitle>
+                <CardTitle className="text-lg">MENA Regional Coverage</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-primary/5 h-40 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">MENA Region Coverage</p>
-                  </div>
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <MenaMap className="h-48 mb-4" />
+                <div className="flex flex-wrap gap-2">
                   {menaCountries.slice(0, 6).map((country, idx) => (
                     <span key={idx} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
                       {country}
@@ -207,7 +203,7 @@ const Contact = () => {
                       <Input
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="+971 XX XXX XXXX"
+                        placeholder="+971 50 763 6248"
                       />
                     </div>
                     <div>
@@ -280,7 +276,7 @@ const Contact = () => {
                       size="lg" 
                       type="button"
                       className="sm:w-auto hover:scale-105 transition-transform duration-300"
-                      onClick={() => window.open('tel:+971XXXXXXXX', '_self')}
+                      onClick={() => window.open('tel:+971507636248', '_self')}
                     >
                       Call Now
                     </Button>
@@ -289,6 +285,49 @@ const Contact = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Dubai Office Location Map */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">Our Dubai Headquarters</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Located in the heart of Dubai's technology hub, our headquarters serves the entire MENA region.
+            </p>
+          </div>
+          <Card className="max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <MenaMap className="h-64" showDubaiOffice={true} />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold mb-2">Address:</h4>
+                    <p className="text-muted-foreground">
+                      Building A1, Dubai Digital Park<br />
+                      Dubai Silicon Oasis<br />
+                      Dubai – United Arab Emirates
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Contact:</h4>
+                    <p className="text-muted-foreground">
+                      📧 contact@soditech-ltd.com<br />
+                      📞 +971 50 763 6248
+                    </p>
+                  </div>
+                  <Button 
+                    onClick={() => window.open('https://maps.google.com/maps?q=Dubai+Digital+Park+Dubai+Silicon+Oasis', '_blank')}
+                    className="hover:scale-105 transition-transform duration-300"
+                  >
+                    <MapPin className="h-4 w-4 mr-2" />
+                    View on Maps
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

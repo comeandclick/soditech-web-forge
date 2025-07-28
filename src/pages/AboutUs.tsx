@@ -62,24 +62,24 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-              Qui Sommes Nous ?
+              About Us
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
-              Depuis 1979, SODITECH est votre partenaire de confiance pour les solutions industrielles 
-              innovantes dans les secteurs de l'environnement et des procédés industriels.
+              Since 1979, SODITECH has been your trusted partner for innovative industrial solutions 
+              in environmental and process industry sectors across the MENA region.
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-scale-in">
               <div className="text-center">
                 <div className="text-4xl font-mono font-bold text-primary">45+</div>
-                <div className="text-sm text-muted-foreground">Années d'Expertise</div>
+                <div className="text-sm text-muted-foreground">Years of Expertise</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-mono font-bold text-accent">7</div>
-                <div className="text-sm text-muted-foreground">Partenaires Exclusifs</div>
+                <div className="text-sm text-muted-foreground">Exclusive Partners</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-mono font-bold text-primary">15+</div>
-                <div className="text-sm text-muted-foreground">Pays MENA</div>
+                <div className="text-sm text-muted-foreground">MENA Countries</div>
               </div>
             </div>
           </div>
@@ -92,22 +92,22 @@ const AboutUs = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <Card className="bg-industrial-gradient text-white shadow-industrial hover-lift">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Notre Mission</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-lg leading-relaxed">
-                  Fournir des solutions industrielles de pointe qui allient excellence technique 
-                  et responsabilité environnementale, en soutenant la transition de la région 
-                  vers des pratiques industrielles durables.
+                  To provide cutting-edge industrial solutions that combine technical excellence 
+                  and environmental responsibility, supporting the region's transition towards 
+                  sustainable industrial practices.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="bg-eco-gradient text-white shadow-eco hover-lift">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Notre Vision</h3>
+                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-lg leading-relaxed">
-                  Être le leader régional des solutions industrielles éco-responsables, 
-                  contribuant activement aux objectifs environnementaux globaux et à la 
-                  transformation durable de l'industrie MENA.
+                  To be the regional leader in eco-responsible industrial solutions, 
+                  actively contributing to global environmental objectives and the 
+                  sustainable transformation of MENA industry.
                 </p>
               </CardContent>
             </Card>
@@ -119,7 +119,7 @@ const AboutUs = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Notre Histoire</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Our Story</h2>
             
             <div className="space-y-12">
               <Card className="hover-lift animate-fade-in">
@@ -129,10 +129,10 @@ const AboutUs = () => {
                       1979
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Fondation de SODITECH</h3>
+                      <h3 className="text-xl font-bold mb-3">Foundation of SODITECH</h3>
                       <p className="text-muted-foreground">
-                        Création de l'entreprise avec pour vision de devenir un acteur majeur 
-                        des solutions industrielles dans la région MENA.
+                        Company establishment with the vision to become a major player 
+                        in industrial solutions across the MENA region.
                       </p>
                     </div>
                   </div>
@@ -146,10 +146,10 @@ const AboutUs = () => {
                       1990s
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Expansion Régionale</h3>
+                      <h3 className="text-xl font-bold mb-3">Regional Expansion</h3>
                       <p className="text-muted-foreground">
-                        Extension des opérations à travers la région MENA, établissement 
-                        de relations clients durables et développement de l'expertise technique.
+                        Operations expansion across the MENA region, establishment 
+                        of lasting client relationships and technical expertise development.
                       </p>
                     </div>
                   </div>
@@ -163,10 +163,10 @@ const AboutUs = () => {
                       2000s
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Partenariats Technologiques</h3>
+                      <h3 className="text-xl font-bold mb-3">Technology Partnerships</h3>
                       <p className="text-muted-foreground">
-                        Établissement de partenariats exclusifs avec des fabricants européens 
-                        de premier plan, garantissant l'accès aux technologies les plus avancées.
+                        Establishment of exclusive partnerships with leading European manufacturers, 
+                        ensuring access to the most advanced technologies.
                       </p>
                     </div>
                   </div>
@@ -180,10 +180,10 @@ const AboutUs = () => {
                       2024
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Focus Environnemental</h3>
+                      <h3 className="text-xl font-bold mb-3">Environmental Focus</h3>
                       <p className="text-muted-foreground">
-                        Leadership dans la transition vers des solutions industrielles 
-                        éco-responsables, contribution active aux objectifs de développement durable.
+                        Leadership in the transition to eco-responsible industrial solutions, 
+                        active contribution to sustainable development objectives.
                       </p>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ const AboutUs = () => {
       {/* Values */}
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Nos Valeurs</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center hover-lift animate-fade-in group">
@@ -217,7 +217,7 @@ const AboutUs = () => {
       {/* Team */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Notre Équipe</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <Card key={index} className="hover-lift animate-fade-in">
@@ -234,27 +234,27 @@ const AboutUs = () => {
       {/* CTA Section */}
       <section className="py-16 bg-industrial-gradient text-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Prêt à Collaborer ?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Collaborate?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Découvrez comment notre expertise peut transformer vos défis industriels 
-            en opportunités de croissance durable.
+            Discover how our expertise can transform your industrial challenges 
+            into sustainable growth opportunities.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="lg" 
               variant="secondary"
               className="hover:scale-105 transition-transform duration-300"
-              onClick={() => window.location.href = '#contact'}
+              onClick={() => window.location.href = '/#contact'}
             >
-              Contactez-nous
+              Contact Us
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               className="text-white border-white hover:bg-white hover:text-primary hover:scale-105 transition-all duration-300"
-              onClick={() => window.location.href = '#solutions'}
+              onClick={() => window.location.href = '/#solutions'}
             >
-              Nos Solutions
+              Our Solutions
             </Button>
           </div>
         </div>

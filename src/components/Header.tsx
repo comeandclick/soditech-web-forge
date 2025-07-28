@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Moon, Sun, Globe } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,20 +7,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import soditectLogo from "@/assets/soditech-logo.png";
+import { useTranslation } from "@/components/TranslationProvider";
+const soditectLogo = "/lovable-uploads/75fbe39c-c656-4955-8792-871d1c99d373.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [language, setLanguage] = useState("en");
+  const { language, setLanguage, t } = useTranslation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Our Solutions", href: "#solutions" },
-    { name: "Partnerships", href: "#partnerships" },
-    { name: "Environmental Commitment", href: "#environment" },
-    { name: "Contact", href: "#contact" },
+    { name: t('nav.home'), href: "/" },
+    { name: t('nav.about'), href: "/about" },
+    { name: t('nav.solutions'), href: "#solutions" },
+    { name: t('nav.partnerships'), href: "#partnerships" },
+    { name: t('nav.environment'), href: "#environment" },
+    { name: t('nav.contact'), href: "#contact" },
   ];
 
   return (
@@ -75,29 +74,20 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            >
-              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
 
             <Button 
               variant="outline" 
               size="sm"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get Quote
+              {t('nav.getQuote')}
             </Button>
             <Button 
               size="sm" 
               className="bg-primary hover:bg-primary-variant"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Contact Us
+              {t('nav.contactUs')}
             </Button>
           </div>
 
@@ -135,18 +125,18 @@ const Header = () => {
                     setIsMenuOpen(false);
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                >
-                  Get Quote
-                </Button>
-                <Button 
-                  className="w-full bg-primary hover:bg-primary-variant"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  Contact Us
-                </Button>
+                  >
+                    {t('nav.getQuote')}
+                  </Button>
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary-variant"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    {t('nav.contactUs')}
+                  </Button>
               </div>
             </div>
           </div>

@@ -1,12 +1,20 @@
 import { ExternalLink, Star, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import sodimateLogoUrl from "@/assets/logos/sodimate-logo.png";
+import faureLogoUrl from "@/assets/logos/faure-logo.png";
+import fbProcedesLogoUrl from "@/assets/logos/fb-procedes-logo.png";
+import technilabLogoUrl from "@/assets/logos/technilab-logo.png";
+import valveLogoUrl from "@/assets/logos/valve-engineering-logo.png";
+import parimixLogoUrl from "@/assets/logos/parimix-logo.png";
+import transitubeLogoUrl from "@/assets/logos/transitube-logo.png";
 
 const Partnerships = () => {
   const environmentalPartners = [
     {
       name: "SODIMATE",
       url: "https://www.sodimate.com",
+      logo: sodimateLogoUrl,
       specialty: "Dry Chemical Solutions",
       description: "World leader in dry chemical handling, dosing and injection systems",
       keyProducts: ["Lime dosing systems", "Polymer preparation", "Chemical injection", "Silo storage"],
@@ -15,6 +23,7 @@ const Partnerships = () => {
     {
       name: "FAURE Équipements",
       url: "https://www.faureequip.com",
+      logo: faureLogoUrl,
       specialty: "Liquid & Sludge Treatment",
       description: "Innovative solutions for liquid treatment and sludge management",
       keyProducts: ["Sludge stabilization", "Liquid dosing", "Mixing systems", "Storage tanks"],
@@ -23,6 +32,7 @@ const Partnerships = () => {
     {
       name: "FB Procédés",
       url: "https://www.fb-procedes.com",
+      logo: fbProcedesLogoUrl,
       specialty: "Gas & Fume Treatment",
       description: "Advanced air pollution control and fume treatment technologies",
       keyProducts: ["Scrubbers", "Biofilters", "Thermal oxidizers", "Dust collectors"],
@@ -34,6 +44,7 @@ const Partnerships = () => {
     {
       name: "TECHNILAB",
       url: "https://www.technilab.fr",
+      logo: technilabLogoUrl,
       specialty: "Powder Handling Systems",
       description: "Premium solutions for powder conveying, dosing and storage systems",
       keyProducts: ["Pneumatic conveyors", "Big bag stations", "Screw feeders", "Silos"],
@@ -42,6 +53,7 @@ const Partnerships = () => {
     {
       name: "Valve Engineering",
       url: "https://www.valvengineering.com",
+      logo: valveLogoUrl,
       specialty: "Industrial Valves & Controls",
       description: "High-performance valve solutions for critical industrial applications",
       keyProducts: ["Control valves", "Safety valves", "Ball valves", "Butterfly valves"],
@@ -50,6 +62,7 @@ const Partnerships = () => {
     {
       name: "Parimix",
       url: "https://parimix.com",
+      logo: parimixLogoUrl,
       specialty: "Mixing & Blending Solutions",
       description: "Advanced mixing technology for powder and liquid applications",
       keyProducts: ["Industrial mixers", "Blending systems", "Agitators", "Custom solutions"],
@@ -58,6 +71,7 @@ const Partnerships = () => {
     {
       name: "Transitube",
       url: "https://transitube.com",
+      logo: transitubeLogoUrl,
       specialty: "Pneumatic Conveying",
       description: "Specialized pneumatic conveying systems for bulk materials",
       keyProducts: ["Dense phase systems", "Dilute phase systems", "Vacuum conveyors", "Pressure vessels"],
@@ -74,7 +88,7 @@ const Partnerships = () => {
             Exclusive MENA Partnerships
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
-            Exclusive distributor partnerships across MENA with <span className="text-accent font-semibold">7 leading European manufacturers</span>, 
+            Exclusive distributor partnerships across MENA with <span className="text-accent font-semibold">7 leading European manufacturers</span>,
             ensuring access to cutting-edge technologies and comprehensive industrial solutions.
           </p>
         </div>
@@ -119,12 +133,19 @@ const Partnerships = () => {
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {environmentalPartners.map((partner, index) => (
-              <Card key={index} className="hover-lift group animate-fade-in">
+                <Card key={index} className="hover-lift group animate-fade-in">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
-                      {partner.name}
-                    </h4>
+                    <div className="flex items-center gap-4">
+                      <img 
+                        src={partner.logo} 
+                        alt={`${partner.name} logo`}
+                        className="h-12 w-auto object-contain"
+                      />
+                      <h4 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
+                        {partner.name}
+                      </h4>
+                    </div>
                     <a 
                       href={partner.url} 
                       target="_blank" 
@@ -168,12 +189,19 @@ const Partnerships = () => {
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {processIndustryPartners.map((partner, index) => (
-              <Card key={index} className="hover-lift group animate-fade-in">
+               <Card key={index} className="hover-lift group animate-fade-in">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-between mb-6">
-                    <h4 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
-                      {partner.name}
-                    </h4>
+                    <div className="flex items-center gap-4">
+                      <img 
+                        src={partner.logo} 
+                        alt={`${partner.name} logo`}
+                        className="h-12 w-auto object-contain"
+                      />
+                      <h4 className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
+                        {partner.name}
+                      </h4>
+                    </div>
                     <a 
                       href={partner.url} 
                       target="_blank" 
