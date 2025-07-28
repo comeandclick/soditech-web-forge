@@ -51,7 +51,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-eco-dark text-white font-semibold px-8 shadow-eco hover-lift"
+              className="bg-accent hover:bg-eco-dark text-white font-semibold px-8 shadow-eco hover-lift animate-scale-in"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Request a Quote
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -60,7 +61,8 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20 font-semibold px-8 backdrop-blur-sm"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20 font-semibold px-8 backdrop-blur-sm animate-scale-in"
+              onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Discover Our Solutions
             </Button>

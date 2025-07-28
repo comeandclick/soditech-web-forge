@@ -258,7 +258,19 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="bg-primary hover:bg-primary-variant flex-1"
+                      className="bg-primary hover:bg-primary-variant flex-1 hover:scale-105 transition-transform duration-300"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const form = e.currentTarget.closest('form') as HTMLFormElement;
+                        const formData = new FormData(form);
+                        const data = Object.fromEntries(formData);
+                        console.log('Form data:', data);
+                        toast({
+                          title: "Quote Request Sent",
+                          description: "Thank you for your interest. We'll contact you within 24 hours.",
+                        });
+                        form.reset();
+                      }}
                     >
                       <Send className="h-5 w-5 mr-2" />
                       Send Quote Request
@@ -267,7 +279,8 @@ const Contact = () => {
                       variant="outline" 
                       size="lg" 
                       type="button"
-                      className="sm:w-auto"
+                      className="sm:w-auto hover:scale-105 transition-transform duration-300"
+                      onClick={() => window.open('tel:+971XXXXXXXX', '_self')}
                     >
                       Call Now
                     </Button>

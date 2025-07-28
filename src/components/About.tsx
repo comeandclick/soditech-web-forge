@@ -79,24 +79,6 @@ const About = () => {
           </Card>
         </div>
 
-        {/* Company timeline */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-12">Our Journey</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {milestones.map((milestone, index) => (
-              <Card key={index} className="hover-lift">
-                <CardContent className="p-6 text-center">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-full text-white font-mono font-bold mb-4 mx-auto">
-                    <Calendar className="h-5 w-5" />
-                  </div>
-                  <div className="text-2xl font-bold text-primary mb-2">{milestone.year}</div>
-                  <h4 className="font-semibold mb-2">{milestone.title}</h4>
-                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Values */}
         <div>

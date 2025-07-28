@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import soditectLogo from "@/assets/soditech-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +16,8 @@ const Header = () => {
   const [language, setLanguage] = useState("en");
 
   const navigation = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Our Solutions", href: "#solutions" },
     { name: "Partnerships", href: "#partnerships" },
     { name: "Environmental Commitment", href: "#environment" },
@@ -29,19 +30,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-sm">ST</span>
-              </div>
-              <div>
-                <div className="font-mono font-bold text-xl text-primary">
-                  SODITECH
-                </div>
-                <span className="text-xs text-muted-foreground hidden sm:block">
-                  Advanced Process Solutions
-                </span>
-              </div>
-            </div>
+            <img 
+              src={soditectLogo} 
+              alt="SODITECH" 
+              className="h-12 w-auto hover:scale-105 transition-transform duration-300" 
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -92,10 +85,18 @@ const Header = () => {
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
 
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Quote
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary-variant">
+            <Button 
+              size="sm" 
+              className="bg-primary hover:bg-primary-variant"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Contact Us
             </Button>
           </div>
@@ -127,10 +128,23 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Get Quote
                 </Button>
-                <Button className="w-full bg-primary hover:bg-primary-variant">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary-variant"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Contact Us
                 </Button>
               </div>
