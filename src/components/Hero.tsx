@@ -4,10 +4,10 @@ import heroImage from "@/assets/hero-industrial.jpg";
 
 const Hero = () => {
   const achievements = [
-    "45+ years of industrial expertise",
-    "End-to-end solutions for powder handling & process",
-    "High standards, smart engineering", 
-    "Eco-conscious technologies"
+    "Century-old European expertise",
+    "Complete system integration & turnkey solutions",
+    "Exclusive MENA partnerships with leading manufacturers", 
+    "Proven eco-conscious technologies"
   ];
 
   return (
@@ -32,8 +32,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
-              Leading provider of industrial solutions for manutention, dosage, transfer, 
-              and treatment in environmental, water treatment, and industrial process sectors.
+              Your exclusive MENA gateway to century-old European expertise in environmental 
+              and process solutions. Complete systems from proven manufacturers.
             </p>
           </div>
 

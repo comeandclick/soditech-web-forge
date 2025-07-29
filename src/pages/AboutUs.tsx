@@ -8,48 +8,52 @@ const AboutUs = () => {
   const values = [
     {
       icon: Award,
-      title: "Reliability",
-      description: "45+ years of proven industrial expertise and consistent delivery across complex projects"
+      title: "Century-Old Heritage",
+      description: "Building on proven industrial expertise from European partners, some with over 150 years of experience"
     },
     {
       icon: Target,
-      title: "Precision",
-      description: "High standards and smart engineering in every solution, ensuring optimal performance"
+      title: "Technical Integration",
+      description: "Complete system solutions covering chemical preparation, dehydration, storage, transfer, and treatment"
     },
     {
       icon: Leaf,
-      title: "Sustainability",
-      description: "Committed to eco-conscious technologies and environmental responsibility in all our operations"
+      title: "Environmental Excellence",
+      description: "Specialized in eco-conscious technologies for water treatment, waste valorization, and industrial utilities"
     },
     {
       icon: Users,
-      title: "Partnership",
-      description: "Building long-term relationships with clients and exclusive partnerships with leading manufacturers"
+      title: "Exclusive Partnership",
+      description: "Sole MENA representative for leading European manufacturers, ensuring unique market access"
     },
     {
       icon: Globe,
-      title: "Regional Excellence",
-      description: "Deep understanding of MENA market requirements and local industrial challenges"
+      title: "Regional Expertise",
+      description: "Combining European quality and engineering with deep MENA market understanding and local responsiveness"
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Continuously adopting cutting-edge technologies and innovative approaches to industrial solutions"
+      title: "Complete Solutions",
+      description: "From commercial promotion and technical support to full project implementation and commissioning"
     }
   ];
 
-  const team = [
+  const services = [
     {
-      role: "Executive Leadership",
-      description: "Seasoned professionals with decades of experience in industrial solutions and regional market development"
+      title: "Commercial Promotion",
+      description: "Comprehensive market development and business promotion for our European partners across the MENA region"
     },
     {
-      role: "Technical Experts",
-      description: "Specialized engineers and technicians ensuring optimal system design, installation, and maintenance"
+      title: "Technical Support",
+      description: "Local engineering expertise and technical assistance for system design, specification, and optimization"
     },
     {
-      role: "Sales & Support",
-      description: "Dedicated team providing comprehensive customer support from initial consultation to after-sales service"
+      title: "Project Implementation",
+      description: "Complete project management from tender support to final commissioning and handover"
+    },
+    {
+      title: "System Integration",
+      description: "Combining complementary technologies into complete, turnkey solutions tailored to client requirements"
     }
   ];
 
@@ -62,16 +66,16 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-              About Us
+              Who We Are
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
-              Since 1979, SODITECH has been your trusted partner for innovative industrial solutions 
-              in environmental and process industry sectors across the MENA region.
+              Founded in 2024, SODITECH consolidates century-old European expertise to serve as your 
+              exclusive MENA gateway for proven industrial solutions in environmental and process sectors.
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-scale-in">
               <div className="text-center">
-                <div className="text-4xl font-mono font-bold text-primary">45+</div>
-                <div className="text-sm text-muted-foreground">Years of Expertise</div>
+                <div className="text-4xl font-mono font-bold text-primary">100+</div>
+                <div className="text-sm text-muted-foreground">Years Partner Heritage</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-mono font-bold text-accent">7</div>
@@ -94,9 +98,9 @@ const AboutUs = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-lg leading-relaxed">
-                  To provide cutting-edge industrial solutions that combine technical excellence 
-                  and environmental responsibility, supporting the region's transition towards 
-                  sustainable industrial practices.
+                  To serve as the exclusive MENA anchor point for leading European manufacturers, 
+                  providing comprehensive technical solutions from commercial promotion to complete 
+                  project implementation and commissioning.
                 </p>
               </CardContent>
             </Card>
@@ -105,9 +109,9 @@ const AboutUs = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-lg leading-relaxed">
-                  To be the regional leader in eco-responsible industrial solutions, 
-                  actively contributing to global environmental objectives and the 
-                  sustainable transformation of MENA industry.
+                  To become the definitive bridge between century-old European industrial excellence 
+                  and the dynamic MENA market, facilitating sustainable industrial transformation 
+                  through proven technologies and local expertise.
                 </p>
               </CardContent>
             </Card>
@@ -119,54 +123,21 @@ const AboutUs = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Story</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Our Genesis</h2>
             
             <div className="space-y-12">
               <Card className="hover-lift animate-fade-in">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      1979
+                    <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      1868
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Foundation of SODITECH</h3>
+                      <h3 className="text-xl font-bold mb-3">Heritage Foundation</h3>
                       <p className="text-muted-foreground">
-                        Company establishment with the vision to become a major player 
-                        in industrial solutions across the MENA region.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover-lift animate-fade-in">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      1990s
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3">Regional Expansion</h3>
-                      <p className="text-muted-foreground">
-                        Operations expansion across the MENA region, establishment 
-                        of lasting client relationships and technical expertise development.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover-lift animate-fade-in">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      2000s
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3">Technology Partnerships</h3>
-                      <p className="text-muted-foreground">
-                        Establishment of exclusive partnerships with leading European manufacturers, 
-                        ensuring access to the most advanced technologies.
+                        Our partner FAURE Équipement established, beginning a legacy of industrial 
+                        excellence that spans over 150 years. Multiple European companies develop 
+                        specialized expertise in their respective domains.
                       </p>
                     </div>
                   </div>
@@ -180,10 +151,29 @@ const AboutUs = () => {
                       2024
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-3">Environmental Focus</h3>
+                      <h3 className="text-xl font-bold mb-3">Strategic Consolidation</h3>
                       <p className="text-muted-foreground">
-                        Leadership in the transition to eco-responsible industrial solutions, 
-                        active contribution to sustainable development objectives.
+                        SODITECH founded as a strategic consolidation, bringing together 
+                        leading European manufacturers under one regional umbrella to serve 
+                        the MENA market with unparalleled expertise.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-lift animate-fade-in">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      Today
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">Exclusive MENA Gateway</h3>
+                      <p className="text-muted-foreground">
+                        Operating as the exclusive MENA representative, we provide complete 
+                        solutions from commercial promotion and technical support to full 
+                        project implementation and commissioning.
                       </p>
                     </div>
                   </div>
@@ -214,16 +204,16 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Our Services */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
+          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <Card key={index} className="hover-lift animate-fade-in">
-                <CardContent className="p-8 text-center">
-                  <h4 className="text-xl font-bold mb-4 text-primary">{member.role}</h4>
-                  <p className="text-muted-foreground">{member.description}</p>
+                <CardContent className="p-8">
+                  <h4 className="text-xl font-bold mb-4 text-primary">{service.title}</h4>
+                  <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
