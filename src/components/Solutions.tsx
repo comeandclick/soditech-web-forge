@@ -2,20 +2,17 @@ import { Cog, Droplets, Wind, Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import solution1Image from "@/assets/solution-1.jpg";
-import solution2Image from "@/assets/solution-2.jpg";
-import solution3Image from "@/assets/solution-3.jpg";
-import { useTranslation } from './TranslationProvider';
+import powderHandlingImage from "@/assets/powder-handling.jpg";
+import waterTreatmentImage from "@/assets/water-treatment.jpg";
+import gasTreatmentImage from "@/assets/gas-treatment.jpg";
 
 const Solutions = () => {
-  const { t } = useTranslation();
-  
   const solutions = [
     {
       icon: Cog,
-      title: t('solutions.powder.title'),
-      subtitle: t('solutions.powder.subtitle'),
-      image: solution1Image,
+      title: "Powder Handling",
+      subtitle: "Complete handling systems",
+      image: powderHandlingImage,
       description: "Comprehensive solutions for powder and granular material handling including silos, screw conveyors, big bag stations, feeders, and pneumatic transport systems.",
       features: [
         "Storage silos & hoppers",
